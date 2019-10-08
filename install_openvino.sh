@@ -44,7 +44,9 @@ rm -rf /opt/intel/openvino_2019.3.334/deployment_tools/intel_models
 rm -rf /opt/intel/openvino_2019.3.334/deployment_tools/demo
 rm -rf /opt/intel/openvino_2019.3.334/deployment_tools/model_optimizer
 
-rm -rf /opt/intelopenvino_2019.3.334/openvx/samples
+rm -rf /opt/intel/openvino_2019.3.334/openvx/samples
+
+rm -rf /opt/intel/mediasdk
 
 apt-get autoremove
 apt-get clean
