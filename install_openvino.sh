@@ -6,9 +6,15 @@ DOWNLOAD_LINK=http://registrationcenter-download.intel.com/akdlm/irc_nas/15944/l
 
 # Install dependencies
 apt-get update
+apt-get upgrade -y
 
-apt-get install -y --no-install-recommends cpio lsb-release sudo wget
-apt-get install -y --no-install-recommends python3-pip python3 libpython3.6 libpython3.6-dev
+apt-get install -y cpio lsb-release sudo wget
+apt-get install -y libjpeg-dev libpng-dev libtiff-dev
+apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+apt-get install -y libxvidcore-dev libx264-dev libomp-dev
+apt-get install -y libatlas-base-dev gfortran
+apt-get install -y build-essential cmake pkg-config
+apt-get install -y python3-pip python3 libpython3.6 libpython3.6-dev
 
 update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
 update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
