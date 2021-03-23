@@ -14,10 +14,16 @@ apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 apt-get install -y libxvidcore-dev libx264-dev libomp-dev
 apt-get install -y libatlas-base-dev gfortran
 apt-get install -y build-essential cmake pkg-config
-apt-get install -y python3-pip python3 libpython3.6 libpython3.6-dev
+apt-get install -y libsm6 libxext6
 
-update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
-update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+apt-get install -y curl python3.7 python3.7-dev python3.7-distutils
+
+update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
+update-alternatives --set python /usr/bin/python3.7
+
+curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    python get-pip.py --force-reinstall && \
+    rm get-pip.py
 
 pip install numpy
 
